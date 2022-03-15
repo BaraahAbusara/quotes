@@ -11,8 +11,9 @@ import java.util.Arrays;
 import java.util.function.Predicate;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static quoteApp.App.fileDemoReader;
-import static quoteApp.App.randomQoutePicker;
+
+import static quoteApp.ReadFromFile.fileDemoReader;
+import static quoteApp.ReadFromFile.randomQuotePicker;
 
 class AppTest {
     @Test
@@ -21,7 +22,7 @@ class AppTest {
         String dataJson= fileDemoReader();
         Gson gson = new Gson();
         Quote[] quoteArray = gson.fromJson(dataJson , Quote[].class);
-        Quote randomAns = randomQoutePicker(dataJson);
+        Quote randomAns = randomQuotePicker(dataJson);
         ArrayList <Quote> arrQ = new ArrayList<Quote>();
         boolean flag = false;
 
@@ -33,4 +34,6 @@ class AppTest {
 
         assertTrue(flag);
     }
+
+
 }

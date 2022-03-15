@@ -12,60 +12,21 @@ import java.nio.file.Paths;
 import java.util.Random;
 import java.util.Scanner;
 
+import static quoteApp.ReadFromFile.fileDemoReader;
+import static quoteApp.ReadFromFile.randomQuotePicker;
+import static quoteApp.ReadQuoteFromAPIAndSaveToFile.ReadQuoteFromAPI;
+
 
 public class App {
 
-
-    public static String fileDemoReader() { // instructor's code
-
-        ClassLoader classLoader = App.class.getClassLoader();
-        String path = classLoader.getResource("recentquotes.json").getPath();
-
-//        String path = "app/src/main/resources/recentquotes.json";
-
-        try {
-            BufferedReader reader = new BufferedReader(new FileReader(path) );
-            String line = reader.readLine();
-            String lines ="";
-            while (line != null) {
-//                System.out.println(line);
-                lines+=line;
-                line = reader.readLine();
-
-            }
-            reader.close();
-            return lines ;
-        } catch (IOException exception) {
-            System.err.println(exception.getMessage());
-        } finally {
-            System.out.println("Program executed"); // read up on why this is useful
-        }
-        return "";
-
-    }
-    public static Quote randomQoutePicker (String dataJson)
-    {
-//      https://howtodoinjava.com/gson/gson-parse-json-array/?fbclid=IwAR3hOnoSCa9CVVfDaAosBRn0uPI7wTm3Bks3V47rCAirBgnxzoBt5HWNQ58
-        Gson gson = new Gson();
-        Quote[] quoteArray = gson.fromJson(dataJson , Quote[].class);
-
-//        for(Quote quote : quoteArray) {
-//            System.out.println(quote.toString());
-//        }
-//        // https://www.w3schools.in/java-program/generate-random-numbers/
-        Random rand = new Random();
-        int minRange = 0, maxRange= quoteArray.length ;
-        int randomIdx = rand.nextInt(maxRange - minRange) + minRange;
-
-        System.out.println(quoteArray[randomIdx].text+"\n"+"Author :"+quoteArray[randomIdx].author);
-
-        return quoteArray[randomIdx];
-
-    }
-
     public static void main(String[] args) {
-        String dataJson= fileDemoReader();
-        Quote randomQuote = randomQoutePicker(dataJson);
+
+//        String dataJson= fileDemoReader();
+//        Quote randomQuote = randomQuotePicker(dataJson);
+//        System.out.println(randomQuote.toString());
+
+        ReadQuoteFromAPI();
+
 
     }
 }

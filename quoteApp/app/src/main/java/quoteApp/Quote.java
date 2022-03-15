@@ -2,22 +2,19 @@ package quoteApp;
 
 import java.util.Arrays;
 
-public class Quote {
+public class Quote extends QuotesParent{
     String author ;
-    String likes;
     String text ;
 
-    public Quote( String author, String likes, String text) {
-        this.author = author;
-        this.likes = likes;
-        this.text = text;
+    public Quote( String quoteText, String quoteAuthor) {
+        this.author = quoteAuthor;
+        this.text = quoteText;
     }
 
     @Override
     public String toString() {
         return "Quote{" +
                 "author='" + author + '\'' +
-                ", likes='" + likes + '\'' +
                 ", text='" + text + '\'' +
                 '}';
     }
