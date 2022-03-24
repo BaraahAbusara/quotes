@@ -1,28 +1,26 @@
 package quoteApp;
 import com.google.gson.Gson;
-
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
-
 import static quoteApp.ReadFromFile.fileDemoReader;
 import static quoteApp.ReadFromFile.randomQuotePicker;
 
 public class ReadQuoteFromAPIAndSaveToFile {
 
    public static void saveQuoteToFile(QuoteAPI data) throws IOException {
-       System.out.println("in save data");
+//       System.out.println("in save data");
        //step 1 : read data we already have
        String firstJsonData = fileDemoReader();
-       System.out.println("-------------firstDataJson ---------\n "+firstJsonData);
+//       System.out.println("-------------firstDataJson ---------\n "+firstJsonData);
        //step 2 : parse the data from JSON format to ArrayList of objects
        Gson gsonData = new Gson();
        Quote[] quoteArray = gsonData.fromJson(firstJsonData , Quote[].class);
        ArrayList <Quote> quoteArrayList = new ArrayList<Quote>();
        quoteArrayList.addAll(Arrays.asList(quoteArray));
-       System.out.println("-------------firstDataJava ---------\n "+quoteArrayList.toString());
+//       System.out.println("-------------firstDataJava ---------\n "+quoteArrayList.toString());
 
        //step 3 : add the quote to the ArrayList
        Quote newQuote = new Quote(data.quoteText,data.quoteAuthor);
@@ -70,7 +68,7 @@ public class ReadQuoteFromAPIAndSaveToFile {
 
         }catch (IOException err) { //when we loose the connection
             Quote quote;
-            System.out.println("From the catch in ReadQuoteFromAPI");
+//            System.out.println("From the catch in ReadQuoteFromAPI");
             String dataJson = fileDemoReader(); // this is going to read from the qoutesFile.json
             quote = randomQuotePicker(dataJson);
 

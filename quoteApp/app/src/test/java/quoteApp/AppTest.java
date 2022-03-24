@@ -5,13 +5,7 @@ package quoteApp;
 
 import com.google.gson.Gson;
 import org.junit.jupiter.api.Test;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.function.Predicate;
-
 import static org.junit.jupiter.api.Assertions.*;
-
 import static quoteApp.ReadFromFile.fileDemoReader;
 import static quoteApp.ReadFromFile.randomQuotePicker;
 
@@ -23,12 +17,10 @@ class AppTest {
         Gson gson = new Gson();
         Quote[] quoteArray = gson.fromJson(dataJson , Quote[].class);
         Quote randomAns = randomQuotePicker(dataJson);
-        ArrayList <Quote> arrQ = new ArrayList<Quote>();
         boolean flag = false;
 
         for(Quote quote : quoteArray) {
-            arrQ.add(quote);
-            if(quote.toString().equals(randomAns.toString()));
+            if(quote.toString().equals(randomAns.toString()))
             flag= true ;
         }
 
