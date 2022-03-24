@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="409279d0-e3c9-47ea-ae14-07849321c689" name="Changes" comment="readme added">
-      <change afterPath="$PROJECT_DIR$/quoteApp/app/src/main/java/quoteApp/ReadFromFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quoteApp/app/src/main/java/quoteApp/ReadQuoteFromAPIAndSaveToFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quoteApp/app/src/main/java/quoteApp/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/quoteApp/app/src/main/java/quoteApp/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quoteApp/app/src/main/java/quoteApp/Quote.java" beforeDir="false" afterPath="$PROJECT_DIR$/quoteApp/app/src/main/java/quoteApp/Quote.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quoteApp/app/src/test/java/quoteApp/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/quoteApp/app/src/test/java/quoteApp/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
